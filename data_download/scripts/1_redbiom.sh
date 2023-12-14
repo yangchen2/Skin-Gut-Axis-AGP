@@ -1,14 +1,15 @@
 #!/bin/sh
 
-### this script downloads the biom table and sample metadata from all individuals in the American Gut Project who have a co-morbidity of a skin condition and either IBD/IBS
+### this script downloads the biom table and sample metadata from all individuals in the American Gut Project 
+### who have a co-morbidity of a skin condition and either IBD/IBS
 
 # Define file paths
-SAMPLE_FILE1="../samples/AGP_skin_condition.txt"
-SAMPLE_FILE2="../samples/AGP_ibd_or_ibs.txt"
-SAMPLE_FILE="../samples/AGP_skin_and_gut_condition.txt"
+SAMPLE_FILE1="../samples/skin_disease_pos.txt"
+SAMPLE_FILE2="../samples/gut_disease_pos.txt"
+SAMPLE_FILE="../samples/skin_and_gut_disease_pos.txt"
 
-TBL_FILE="../tables/AGP_skin_and_gut.biom"
-MD_FILE="../metadata/AGP_skin_and_gut_metadata.tsv"
+TBL_FILE="../tables/skin_and_gut_disease_pos.biom"
+MD_FILE="../metadata/skin_and_gut_disease_pos_metadata.tsv"
 
 # Define Redbiom context (CTX)
 CTX="Woltka-per-genome-WoLr2-3ab352"
