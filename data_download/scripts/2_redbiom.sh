@@ -7,9 +7,9 @@
 SAMPLE_FILE1="../samples/skin_disease_pos.txt"
 SAMPLE_FILE2="../samples/ibd_neg.txt"
 SAMPLE_FILE3="../samples/ibs_neg.txt"
-SAMPLE_FILE="../samples/skin_pos_and_gut_neg_metadata.txt"
+SAMPLE_FILE="../samples/skin_pos_and_gut_disease_neg_metadata.txt"
 
-TBL_FILE="../tables/skin_pos_and_gut_neg.biom"
+TBL_FILE="../tables/skin_pos_and_gut_neg_disease.biom"
 MD_FILE="../metadata/skin_pos_and_gut_neg.tsv"
 
 # Define Redbiom context (CTX)

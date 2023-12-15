@@ -10,8 +10,8 @@ SAMPLE_FILE3="../samples/ibs_neg.txt"
 
 SAMPLE_FILE="../samples/skin_gut_disease_neg.txt"
 
-TBL_FILE="../tables/skin_gut_disease_neg.biom"
-MD_FILE="../metadata/skin_gut_disease_neg.tsv"
+TBL_FILE="../tables/skin_and_gut_disease_neg.biom"
+MD_FILE="../metadata/skin_and_gut_disease_neg.tsv"
 
 # Define Redbiom context (CTX)
 CTX="Woltka-per-genome-WoLr2-3ab352"

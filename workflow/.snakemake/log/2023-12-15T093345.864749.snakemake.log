@@ -1,0 +1,4 @@
+Building DAG of jobs...
+WildcardError in rule filter_duplicate_samples in file /Users/yac027/Skin-Gut-Axis-AGP/workflow/rules/pipeline.smk, line 7:
+Wildcards in input files cannot be determined from output files:
+'partition'

@@ -1,0 +1,8 @@
+# Snakefile
+
+include: "rules/pipeline.smk"
+
+rule all:
+    input:
+        all_tables + all_metadata
+

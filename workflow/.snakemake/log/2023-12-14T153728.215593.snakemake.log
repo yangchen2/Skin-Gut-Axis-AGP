@@ -1,0 +1,5 @@
+Building DAG of jobs...
+MissingInputException in rule all in file /Users/yac027/Skin-Gut-Axis-AGP/workflow/Snakefile, line 7:
+Missing input files for rule all:
+    affected files:
+        output/filtered_tables/skin_and_gut_disease_pos_filtered.biom

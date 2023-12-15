@@ -1,0 +1,99 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count
+------------------------  -------
+all                             1
+filter_duplicate_samples        4
+total                           5
+
+Select jobs to execute...
+
+[Fri Dec 15 09:35:02 2023]
+rule filter_duplicate_samples:
+    input: ../data_download/tables/skin_pos_and_gut_disease_neg.biom, ../data_download/metadata/skin_pos_and_gut_disease_neg_metadata.tsv
+    output: output/filtered_tables/skin_pos_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_pos_and_gut_disease_neg_filtered.tsv
+    log: log/skin_pos_and_gut_disease_neg/filter_duplicate_samples.log
+    jobid: 2
+    reason: Missing output files: output/filtered_tables/skin_pos_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_pos_and_gut_disease_neg_filtered.tsv
+    wildcards: partition=skin_pos_and_gut_disease_neg
+    resources: tmpdir=/var/folders/gg/tjf8z7kd7351mxr7fbw1s6j00000gp/T
+
+
+[Fri Dec 15 09:35:02 2023]
+rule filter_duplicate_samples:
+    input: ../data_download/tables/skin_neg_and_gut_disease_pos.biom, ../data_download/metadata/skin_neg_and_gut_disease_pos_metadata.tsv
+    output: output/filtered_tables/skin_neg_and_gut_disease_pos_filtered.biom, output/filtered_metadata/skin_neg_and_gut_disease_pos_filtered.tsv
+    log: log/skin_neg_and_gut_disease_pos/filter_duplicate_samples.log
+    jobid: 3
+    reason: Missing output files: output/filtered_metadata/skin_neg_and_gut_disease_pos_filtered.tsv, output/filtered_tables/skin_neg_and_gut_disease_pos_filtered.biom
+    wildcards: partition=skin_neg_and_gut_disease_pos
+    resources: tmpdir=/var/folders/gg/tjf8z7kd7351mxr7fbw1s6j00000gp/T
+
+
+[Fri Dec 15 09:35:02 2023]
+rule filter_duplicate_samples:
+    input: ../data_download/tables/skin_and_gut_disease_pos.biom, ../data_download/metadata/skin_and_gut_disease_pos_metadata.tsv
+    output: output/filtered_tables/skin_and_gut_disease_pos_filtered.biom, output/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv
+    log: log/skin_and_gut_disease_pos/filter_duplicate_samples.log
+    jobid: 1
+    reason: Missing output files: output/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv, output/filtered_tables/skin_and_gut_disease_pos_filtered.biom
+    wildcards: partition=skin_and_gut_disease_pos
+    resources: tmpdir=/var/folders/gg/tjf8z7kd7351mxr7fbw1s6j00000gp/T
+
+
+[Fri Dec 15 09:35:02 2023]
+rule filter_duplicate_samples:
+    input: ../data_download/tables/skin_and_gut_disease_neg.biom, ../data_download/metadata/skin_and_gut_disease_neg_metadata.tsv
+    output: output/filtered_tables/skin_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_and_gut_disease_neg_filtered.tsv
+    log: log/skin_and_gut_disease_neg/filter_duplicate_samples.log
+    jobid: 4
+    reason: Missing output files: output/filtered_tables/skin_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_and_gut_disease_neg_filtered.tsv
+    wildcards: partition=skin_and_gut_disease_neg
+    resources: tmpdir=/var/folders/gg/tjf8z7kd7351mxr7fbw1s6j00000gp/T
+
+[Fri Dec 15 09:35:02 2023]
+Error in rule filter_duplicate_samples:
+    jobid: 2
+    input: ../data_download/tables/skin_pos_and_gut_disease_neg.biom, ../data_download/metadata/skin_pos_and_gut_disease_neg_metadata.tsv
+    output: output/filtered_tables/skin_pos_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_pos_and_gut_disease_neg_filtered.tsv
+    log: log/skin_pos_and_gut_disease_neg/filter_duplicate_samples.log (check log file(s) for error details)
+    shell:
+        python scripts/filter_duplicate_samples.py ../data_download/tables/skin_pos_and_gut_disease_neg.biom ../data_download/metadata/skin_pos_and_gut_disease_neg_metadata.tsv output/filtered_tables/skin_pos_and_gut_disease_neg_filtered.biom output/filtered_metadata/skin_pos_and_gut_disease_neg_filtered.tsv skin_pos_and_gut_disease_neg
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Dec 15 09:35:02 2023]
+Error in rule filter_duplicate_samples:
+    jobid: 3
+    input: ../data_download/tables/skin_neg_and_gut_disease_pos.biom, ../data_download/metadata/skin_neg_and_gut_disease_pos_metadata.tsv
+    output: output/filtered_tables/skin_neg_and_gut_disease_pos_filtered.biom, output/filtered_metadata/skin_neg_and_gut_disease_pos_filtered.tsv
+    log: log/skin_neg_and_gut_disease_pos/filter_duplicate_samples.log (check log file(s) for error details)
+    shell:
+        python scripts/filter_duplicate_samples.py ../data_download/tables/skin_neg_and_gut_disease_pos.biom ../data_download/metadata/skin_neg_and_gut_disease_pos_metadata.tsv output/filtered_tables/skin_neg_and_gut_disease_pos_filtered.biom output/filtered_metadata/skin_neg_and_gut_disease_pos_filtered.tsv skin_neg_and_gut_disease_pos
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Dec 15 09:35:02 2023]
+Error in rule filter_duplicate_samples:
+    jobid: 1
+    input: ../data_download/tables/skin_and_gut_disease_pos.biom, ../data_download/metadata/skin_and_gut_disease_pos_metadata.tsv
+    output: output/filtered_tables/skin_and_gut_disease_pos_filtered.biom, output/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv
+    log: log/skin_and_gut_disease_pos/filter_duplicate_samples.log (check log file(s) for error details)
+    shell:
+        python scripts/filter_duplicate_samples.py ../data_download/tables/skin_and_gut_disease_pos.biom ../data_download/metadata/skin_and_gut_disease_pos_metadata.tsv output/filtered_tables/skin_and_gut_disease_pos_filtered.biom output/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv skin_and_gut_disease_pos
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+[Fri Dec 15 09:35:02 2023]
+Error in rule filter_duplicate_samples:
+    jobid: 4
+    input: ../data_download/tables/skin_and_gut_disease_neg.biom, ../data_download/metadata/skin_and_gut_disease_neg_metadata.tsv
+    output: output/filtered_tables/skin_and_gut_disease_neg_filtered.biom, output/filtered_metadata/skin_and_gut_disease_neg_filtered.tsv
+    log: log/skin_and_gut_disease_neg/filter_duplicate_samples.log (check log file(s) for error details)
+    shell:
+        python scripts/filter_duplicate_samples.py ../data_download/tables/skin_and_gut_disease_neg.biom ../data_download/metadata/skin_and_gut_disease_neg_metadata.tsv output/filtered_tables/skin_and_gut_disease_neg_filtered.biom output/filtered_metadata/skin_and_gut_disease_neg_filtered.tsv skin_and_gut_disease_neg
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2023-12-15T093454.839931.snakemake.log

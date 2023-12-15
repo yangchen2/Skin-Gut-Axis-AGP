@@ -1,0 +1,24 @@
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count
+------------------------  -------
+filter_duplicate_samples        1
+total                           1
+
+Select jobs to execute...
+
+[Thu Dec 14 15:41:30 2023]
+rule filter_duplicate_samples:
+    input: ../data_download/tables/skin_and_gut_disease_pos.biom, ../data_download/metadata/skin_and_gut_disease_pos_metadata.tsv
+    output: output/filtered_tables/skin_and_gut_disease_pos_filtered.biomoutput/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv
+    log: log/skin_and_gut_disease_pos/filter_duplicate_samples.log
+    jobid: 0
+    reason: Missing output files: output/filtered_tables/skin_and_gut_disease_pos_filtered.biomoutput/filtered_metadata/skin_and_gut_disease_pos_filtered.tsv
+    resources: tmpdir=/var/folders/gg/tjf8z7kd7351mxr7fbw1s6j00000gp/T
+
+RuleException in rule filter_duplicate_samples in file /Users/yac027/Skin-Gut-Axis-AGP/workflow/Snakefile, line 7:
+AttributeError: 'Wildcards' object has no attribute 'partition', when formatting the following:
+python {params.script} {input.biom_table} {input.metadata} {output} {wildcards.partition}

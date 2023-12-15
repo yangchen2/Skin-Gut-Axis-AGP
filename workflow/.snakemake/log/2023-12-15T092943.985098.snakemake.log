@@ -1,0 +1,4 @@
+WildcardError in file /Users/yac027/Skin-Gut-Axis-AGP/workflow/rules/pipeline.smk, line 21:
+No values given for wildcard 'partitions'.
+  File "/Users/yac027/Skin-Gut-Axis-AGP/workflow/Snakefile", line 3, in <module>
+  File "/Users/yac027/Skin-Gut-Axis-AGP/workflow/rules/pipeline.smk", line 21, in <module>

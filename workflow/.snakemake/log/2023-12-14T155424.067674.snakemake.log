@@ -1,0 +1,2 @@
+SyntaxError in file /Users/yac027/Skin-Gut-Axis-AGP/workflow/Snakefile, line 39:
+Unexpected keyword all_analyses in rule definition (Snakefile, line 39)
